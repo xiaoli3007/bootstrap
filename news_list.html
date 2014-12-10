@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <title>后台列表</title>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/base.css" rel="stylesheet" media="screen">
+      <link href="css/news_list.css" rel="stylesheet" media="screen">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container-fluid">
+
+        <!-- 头部导航开始 -->
+        <div class="row show-grid">
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">移动版按钮</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">guanfusoft</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav ">
+                            <li><a href="index.html">首页</a></li>
+                            <li><a href="list.html">列表页</a></li>
+                            <li><a href="new.html">最终页</a></li>
+                            <li class="active"><a href="news_list.html">新闻列表</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于 <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">关于我们</a></li>
+                                    <li><a href="#">联系我们</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">地址：北京市海淀区中关村南鼎好大厦</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">电话:13523523578</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="关键字">
+                            </div>
+                            <button type="submit" class="btn btn-default">搜索</button>
+                        </form>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="login.html">登录</a></li>
+                            <li><a href="reg.html">注册</a></li>
+
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+        <!-- 头部导航结束 -->
+
+      <div class="row list-main">
+          <div class="col-md-2">
+              <div class="list-group">
+                  <a href="#" class="list-group-item active text-center">
+                      新闻资源
+                  </a>
+                  <a href="#" class="list-group-item text-center">视频资源</a>
+                  <a href="#" class="list-group-item text-center">三分钟课件</a>
+                  <a href="#" class="list-group-item text-center">文档</a>
+                  <a href="#" class="list-group-item text-center">音频资源</a>
+              </div>
+              <ul class="nav nav-list">
+              <li class="active">
+                  <a href="index.html">
+                      <i class="icon-dashboard"></i>
+                      <span class="menu-text"> 第二种菜单 </span>
+                  </a>
+              </li>
+            <li>
+                  <a class="dropdown-toggle" href="#">
+                      <i class="icon-desktop"></i>
+                      <span class="menu-text"> UI 组件 </span>
+
+                      <b class="arrow icon-angle-down"></b>
+                  </a>
+
+                  <ul class="submenu" >
+                      <li>
+                          <a href="elements.html">
+                              <i class="icon-double-angle-right"></i>
+                              组件
+                          </a>
+                      </li>
+
+                      <li>
+                          <a href="buttons.html">
+                              <i class="icon-double-angle-right"></i>
+                              按钮 &amp; 图表
+                          </a>
+                      </li>
+
+                      <li class="active">
+                          <a href="treeview.html">
+                              <i class="icon-double-angle-right"></i>
+                              树菜单
+                          </a>
+                      </li>
+
+                      <li>
+                          <a href="jquery-ui.html">
+                              <i class="icon-double-angle-right"></i>
+                              jQuery UI
+                          </a>
+                      </li>
+
+                      <li>
+                          <a href="nestable-list.html">
+                              <i class="icon-double-angle-right"></i>
+                              可拖拽列表
+                          </a>
+                      </li>
+
+
+                  </ul>
+              </li>
+
+              <li>
+                  <a class="dropdown-toggle" href="#">
+                      <i class="icon-list"></i>
+                      <span class="menu-text"> 表格 </span>
+
+                      <b class="arrow icon-angle-down"></b>
+                  </a>
+
+                  <ul class="submenu" style="display: block;">
+                      <li>
+                          <a href="tables.html">
+                              <i class="icon-double-angle-right"></i>
+                              简单 &amp; 动态
+                          </a>
+                      </li>
+
+                      <li>
+                          <a href="jqgrid.html">
+                              <i class="icon-double-angle-right"></i>
+                              jqGrid plugin
+                          </a>
+                      </li>
+                  </ul>
+              </li>
+
+
+
+
+
+              </ul>
+          </div>
+          <div class="col-md-10">
+          <table class="table table-striped news_list">
+
+              <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>标题</th>
+                  <th>作者</th>
+                  <th>时间</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                  <td>1</td>
+                  <td>这是一条关于什么什么的新闻</td>
+                  <td>Otto</td>
+                  <td>2014-07-30</td>
+              </tr>
+              <tr>
+                  <td>2</td>
+                  <td>这是一条关于什么什么的新闻</td>
+                  <td>Thornton</td>
+                  <td>2014-07-30</td>
+              </tr>
+              <tr>
+                  <td>3</td>
+                  <td>这是一条关于什么什么的新闻</td>
+                  <td>the Bird</td>
+                  <td>2014-07-30</td>
+              </tr>
+              <tr>
+                  <td>1</td>
+                  <td>这是一条关于什么什么的新闻</td>
+                  <td>Otto</td>
+                  <td>2014-07-30</td>
+              </tr>
+              <tr>
+                  <td>2</td>
+                  <td>这是一条关于什么什么的新闻</td>
+                  <td>Thornton</td>
+                  <td>2014-07-30</td>
+              </tr>
+              <tr>
+                  <td>3</td>
+                  <td>这是一条关于什么什么的新闻</td>
+                  <td>the Bird</td>
+                  <td>2014-07-30</td>
+              </tr>
+              <tr>
+                  <td>1</td>
+                  <td>这是一条关于什么什么的新闻</td>
+                  <td>Otto</td>
+                  <td>2014-07-30</td>
+              </tr>
+              <tr>
+                  <td>2</td>
+                  <td>这是一条关于什么什么的新闻</td>
+                  <td>Thornton</td>
+                  <td>2014-07-30</td>
+              </tr>
+              <tr>
+                  <td>3</td>
+                  <td>这是一条关于什么什么的新闻</td>
+                  <td>the Bird</td>
+                  <td>2014-07-30</td>
+              </tr>
+              <tr>
+                  <td>1</td>
+                  <td>这是一条关于什么什么的新闻</td>
+                  <td>Otto</td>
+                  <td>2014-07-30</td>
+              </tr>
+              <tr>
+                  <td>2</td>
+                  <td>这是一条关于什么什么的新闻</td>
+                  <td>Thornton</td>
+                  <td>2014-07-30</td>
+              </tr>
+              <tr>
+                  <td>3</td>
+                  <td>这是一条关于什么什么的新闻</td>
+                  <td>the Bird</td>
+                  <td>2014-07-30</td>
+              </tr>
+              <tr>
+                  <td>1</td>
+                  <td>这是一条关于什么什么的新闻</td>
+                  <td>Otto</td>
+                  <td>2014-07-30</td>
+              </tr>
+              <tr>
+                  <td>2</td>
+                  <td>这是一条关于什么什么的新闻</td>
+                  <td>Thornton</td>
+                  <td>2014-07-30</td>
+              </tr>
+              <tr>
+                  <td>3</td>
+                  <td>这是一条关于什么什么的新闻</td>
+                  <td>the Bird</td>
+                  <td>2014-07-30</td>
+              </tr>
+              <tr>
+                  <td>1</td>
+                  <td>这是一条关于什么什么的新闻</td>
+                  <td>Otto</td>
+                  <td>2014-07-30</td>
+              </tr>
+              <tr>
+                  <td>2</td>
+                  <td>这是一条关于什么什么的新闻</td>
+                  <td>Thornton</td>
+                  <td>2014-07-30</td>
+              </tr>
+              <tr>
+                  <td>3</td>
+                  <td>这是一条关于什么什么的新闻</td>
+                  <td>the Bird</td>
+                  <td>2014-07-30</td>
+              </tr>
+
+              </tbody>
+          </table>
+        </div>
+      </div>
+
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center">
+            <nav>
+                <ul class="pagination">
+                    <li class="disabled"><a href="#">«</a></li>
+                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
+            </nav>
+          </div>
+        </div>
+  </div> 
+</body>
+</html>

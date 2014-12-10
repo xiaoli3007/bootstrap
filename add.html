@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="css/add.css" rel="stylesheet" media="screen">
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+         
+         
+      
+   <div class="container">
+
+       <div class="panel  panel-default">
+           <!-- Default panel contents -->
+       <div class="panel-heading">资源编辑</div>
+       <div class="panel-body">
+
+       <div class="row">
+             <ul role="tablist" class="nav nav-tabs">
+               <li class="active" role="presentation"><a href="#description" data-toggle="tab">媒体上传</a></li>
+               <li role="presentation"><a href="#mulu"  data-toggle="tab">基本字段</a></li>
+               <li role="presentation"><a href="#recommond"  data-toggle="tab">联动字段</a></li>
+               <li role="presentation"><a href="#gentie"  data-toggle="tab">附属字段</a></li>
+           </ul>
+       </div>
+
+       <div class="row">
+          <div class="new_description">
+              <form class="form-horizontal" role="form">
+              <div class="tab-content">
+                <div class="tab-pane active" id="description">
+
+                    <table class="table  dataTable upload_form">
+                    <tbody>
+                     <tr>
+                        <th width="80"> 资源上传 </th>
+                        <td>
+                            上传方式：<select id="uploadType" name="uploadType">
+                            <option value="file">文件</option>
+                            <option value="dir">目录</option>
+                        </select>
+                            &nbsp;&nbsp;转码:
+                            <select id="codeState" onchange="initUploadCtrl();" name="codeState">
+
+                                <option value="1">转码</option>
+                                <option value="0">不转码</option>
+                            </select>
+
+
+                            <input type="button" class="btn btn-default resumable-browse" value="上传"  >
+
+
+                        </td>
+                    </tr>
+
+                     <tr class="resumable-progress">
+
+                         <td colspan="2">
+                            <p class="text-center">
+                                <input type="button" onclick="r.upload(); return(false);" class="btn btn-success progress-resume-link" value="开始"  >
+                                <input type="button"  onclick="r.pause(); return(false);" class="btn btn-danger progress-pause-link" value="暂停"  >
+
+                            </p>
+
+                             <table class="table  resumable-list">
+                                 <!--<tr class="resumable-file-">-->
+                                     <!--<td width="20%" align="right"><span class="resumable-file-name">文件名字</span></td>-->
+                                     <!--<td width="60%"><div class="progress"><div class="progress-bar" role="progressbar"  aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div></div></td>-->
+                                     <!--<td width="20%"><span class="resumable-file-status">状态</span></td>-->
+                                 <!--</tr>-->
+
+                             </table>
+
+                          </td>
+                     </tr>
+
+                    <tr>
+                        <th width="80"> 资源列表 </th>
+                        <td>
+                            <span id="ziyuan_ids"></span>
+                            <table  class="table table-bordered table-hover dataTable" id="clone_table">
+                                <tbody>
+                                <tr align="left"><td>名称</td><td align="left">格式</td><td align="left">字幕</td><td align="left">操作 | <a onclick="add_text(12,0,0)" href="javascript:;">添加文本</a></td></tr>
+                                <tr class="attr_51">
+                                    <td>默认<input type="hidden" value="51" name="video_list[]"></td>
+                                    <td>mp4</td>
+                                    <td><a  href="javascript:;">字幕</a></td>
+                                    <td><a  href="javascript:;">修改</a> | <a  href="javascript:;">移除</a></td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+
+
+                </div>
+                <div class="tab-pane" id="mulu">
+
+                    <table class="table table-bordered  dataTable table_form" id="one_form">
+                        <tbody>
+                        <tr data-itemid="33">
+                            <td class="text-center"> <label>标题1</label> </td>
+                            <td><input type="text" class="form-control"  placeholder="必填项" required></td>
+                        </tr>
+                        <tr data-itemid="34">
+                            <td class="text-center"> <label>标题2</label> </td>
+                            <td><input type="text" class="form-control"  placeholder="必填项" required></td>
+                        </tr>
+                        <tr data-itemid="35">
+                            <td class="text-center"> <label>标题3</label> </td>
+                            <td><input type="text" class="form-control"  placeholder="必填项" required></td>
+                        </tr>
+                        <tr data-itemid="36">
+                            <td class="text-center"> <label>标题4 </label></td>
+                            <td>  <textarea type="password" class="form-control"    placeholder="必填项" ></textarea></td>
+                        </tr>
+                        </tbody>
+                        </table>
+
+                </div>
+                <div class="tab-pane" id="recommond">
+
+                    <ul id="base_form" class="form-ul">
+                        <li class="form-group" data-itemid="1">
+                            <label  class="col-md-2 control-label">用户名</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control"  placeholder="必填项" required>
+                            </div>
+                        </li>
+                        <li class="form-group" data-itemid="2">
+                            <label  class="col-md-2 control-label">密码</label>
+                            <div class="col-md-10">
+                                <input type="password" class="form-control"  placeholder="必填项" required>
+                            </div>
+                        </li>
+
+                        <li class="form-group" data-itemid="3">
+                            <label  class="col-md-2 control-label">邮箱</label>
+                            <div class="col-md-10">
+                                <input type="password" class="form-control"    placeholder="必填项" required pattern="^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$" title="邮箱正确格式：xxx@xxx.xxx">
+                            </div>
+                        </li>
+                        <li class="form-group" data-itemid="4">
+                            <label for="inputPassword" class="col-md-2 control-label">描述</label>
+                            <div class="col-md-10">
+                                <textarea type="password" class="form-control"    placeholder="必填项" ></textarea>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </div>
+                <div class="tab-pane" id="gentie">
+
+
+                </div>
+
+
+              </div>
+              </form>
+
+
+              <input type="hidden" id="save1" value="">
+              <input type="hidden" id="save2" value="">
+           </div>
+
+
+       </div>
+
+       </div>
+       </div>
+
+   </div>
+
+   <script type="text/javascript" src="js/jquery.dragsort-0.5.1.min.js"></script>
+   <script type="text/javascript">
+       $("#base_form").dragsort({ dragSelector: "li", dragEnd: saveOrder, placeHolderTemplate: "<li class='placeHolder'><div></div></li>" });
+
+     $("#one_form").dragsort({ dragSelector: "tr", dragEnd: saveOrder, placeHolderTemplate: "<div class='placeHolder'><div>" });
+       function saveOrder() {
+           var data = $("#base_form li").map(function() { return $(this).data("itemid"); }).get();
+           var data2 = $("#one_form tr").map(function() { return $(this).data("itemid"); }).get();
+           $("#save1").val(data);
+          $("#save2").val(data2);
+
+       };
+
+   </script>
+   <script src="js/resumable.js"></script>
+   <script>
+       var r = new Resumable({
+           target:'upload.php',
+           chunkSize:1*1024*1024,
+           simultaneousUploads:4,
+           testChunks:true,
+           throttleProgressCallbacks:1
+       });
+       // Resumable.js isn't supported, fall back on a different method
+       if(!r.support) {
+           $('.resumable-error').show();
+       } else {
+           // Show a place for dropping/selecting files
+          // $('.resumable-drop').show();
+           //r.assignDrop($('.resumable-drop')[0]);
+           r.assignBrowse($('.resumable-browse')[0]);
+           // Handle file add event
+           r.on('fileAdded', function(file){
+               // Show progress pabr
+               $('.resumable-progress, .resumable-list').show();
+               // Show pause, hide resume
+               $('.resumable-progress .progress-resume-link').hide();
+               $('.resumable-progress .progress-pause-link').show();
+               // Add the file to the list
+
+               $('.resumable-list').append('<tr class="resumable-file-'+file.uniqueIdentifier+'"><td width="20%" align="right"><span class="resumable-file-name"></span></td><td width="60%"><div class="progress"><div class="progress-bar" role="progressbar"  aria-valuemin="0" aria-valuemax="100" ></div></div></td><td width="20%"><span class="resumable-file-status"></span></td></tr>');
+               $('.resumable-file-'+file.uniqueIdentifier+' .resumable-file-name').html(file.fileName);
+               // Actually start the upload
+               r.upload();
+           });
+           r.on('pause', function(){
+               // Show resume, hide pause
+               $('.resumable-progress .progress-resume-link').show();
+               $('.resumable-progress .progress-pause-link').hide();
+           });
+           r.on('upload', function(){
+               // Show resume, hide pause
+               $('.resumable-progress .progress-resume-link').hide();
+               $('.resumable-progress .progress-pause-link').show();
+           });
+           r.on('complete', function(){
+               // Hide pause/resume when the upload has completed
+               $('.resumable-progress').hide();
+               $('.resumable-progress .progress-resume-link, .resumable-progress .progress-pause-link').hide();
+           });
+           r.on('fileSuccess', function(file,message){
+               // Reflect that the file upload has completed
+               $('.resumable-file-'+file.uniqueIdentifier+' .resumable-file-status').html('成功');
+               $('.resumable-file-'+file.uniqueIdentifier+' .progress-bar').css({width:100 + '%'});
+               $('.resumable-file-'+file.uniqueIdentifier+'').fadeToggle("slow", "linear");
+               update_media(1,$('.resumable-file-'+file.uniqueIdentifier+' .resumable-file-name').html());
+           });
+           r.on('fileError', function(file, message){
+               // Reflect that the file upload has resulted in error
+               $('.resumable-file-'+file.uniqueIdentifier+' .resumable-file-status').html('(文件上传出错: '+message+')');
+           });
+           r.on('fileProgress', function(file){
+               // Handle progress for both the file and the overall upload
+              // $('.resumable-file-'+file.uniqueIdentifier+' .resumable-file-progress').html(Math.floor(file.progress()*100) + '%');
+
+               $('.resumable-file-'+file.uniqueIdentifier+' .progress-bar').html(Math.floor(file.progress()*100) + '%');
+               $('.resumable-file-'+file.uniqueIdentifier+' .progress-bar').css({width:Math.floor(r.progress()*100) + '%'});
+
+           });
+       }
+
+
+       function update_media(id,title){
+
+           var html='<tr class="attr_'+id+'"><td>'+title+'<input type="hidden" value="'+id+'" name="video_list[]"></td><td>mp4</td><td><a href="#">字幕</a></td><td><a  href="javascript:;">修改</a> | <a  href="javascript:;">移除</a></td></tr>';
+//alert(html);
+           $('#clone_table').append(html);
+
+
+       }
+   </script>
+
+
+  </body>
+</html>

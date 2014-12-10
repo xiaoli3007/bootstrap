@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+
+  <link href="css/base.css" rel="stylesheet" media="screen">
+  <link href="css/new.css" rel="stylesheet" media="screen">
+
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+      <script type="text/javascript" src="ckplayer/ckplayer.js" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+         
+         
+      
+   <div class="container-fluid">      
+		
+        <!-- 头部导航开始 -->
+	 <div class="row show-grid">
+            	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                  <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">移动版按钮</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#">guanfusoft</a>
+                    </div>
+                
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                      <ul class="nav navbar-nav ">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="list.html">列表页</a></li>
+                        <li class="active"><a href="new.html">最终页</a></li>
+                          <li><a href="news_list.html">新闻列表</a></li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于 <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+    					    <li><a href="#">关于我们</a></li>
+                            <li><a href="#">联系我们</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">地址：北京市海淀区中关村南鼎好大厦</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">电话:13523523578</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="关键字">
+                        </div>
+                        <button type="submit" class="btn btn-default">搜索</button>
+                      </form>
+                      <ul class="nav navbar-nav navbar-right">
+                        <li><a href="login.html">登录</a></li>
+                        <li><a href="reg.html">注册</a></li>
+
+                      </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </div><!-- /.container-fluid -->
+                </nav>
+		  </div>
+		<!-- 头部导航结束 -->
+        
+        <div class="row">
+             <div class="new_video text-center">
+
+                 <div id="new_video_player"></div>
+
+             </div>
+       </div>
+
+       <div class="row">
+
+           <ul role="tablist" class="nav nav-tabs">
+               <li class="active" role="presentation"><a href="#description" data-toggle="tab">简介</a></li>
+               <li role="presentation"><a href="#mulu"  data-toggle="tab">目录</a></li>
+               <li role="presentation"><a href="#recommond"  data-toggle="tab">相关推荐</a></li>
+               <li role="presentation"><a href="#gentie"  data-toggle="tab">跟帖</a></li>
+           </ul>
+       </div>
+
+       <div class="row">
+          <div class="new_description">
+              <div class="tab-content">
+                <div class="tab-pane active" id="description">
+                    <h2>我们都是设计师</h2>
+                    <p>类型：艺术</p>
+                    <p>学校：北京大学</p>
+                    <p>讲师：陈凡</p>
+                   <p>网易正式推出“全球名校视频公开课项目” ，首批1200集课程上线，其中有200多集配有中文字幕。用户可以在线免费观看来自于哈佛大学等世界级名校的公开课课程，可汗学院，TED等教育性组织的精彩视频，内容涵盖人文、社会、艺术、科学、金融等领域。 网易公开课，力求为爱学习的网友创造一个公开的免费课程平台，借此向外界公开招聘兼职字幕翻译。网易公开课翻译平台目的是秉承互联网精神：开放、平等、协作、分享，让知识无国界</p>
+                </div>
+                <div class="tab-pane" id="mulu">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="#"><span class="glyphicon glyphicon-play-circle"></span>  justo odio</a></li>
+                        <li class="list-group-item"><a href="#"><span class="glyphicon glyphicon-play-circle"></span>  Dapibus ac facilisis in</a></li>
+                        <li class="list-group-item"><a href="#"><span class="glyphicon glyphicon-play-circle"></span>  Morbi leo risus</a></li>
+                        <li class="list-group-item"><a href="#"><span class="glyphicon glyphicon-play-circle"></span>  Porta ac consectetur ac</a></li>
+                        <li class="list-group-item"><a href="#"><span class="glyphicon glyphicon-play-circle"></span>  Vestibulum at eros</a></li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="recommond">
+                    <div class="list-group">
+                        <div class="new_info row">
+                            <div class="col-md-6 col-xs-6 text-center"><img src="img/bbb.jpg" ></div>
+                            <div class="col-md-6 col-xs-6 text-left">
+
+                                <h4 class="text-left">读万卷书，行万里路</h4>
+                                <p class="text-left"><small>资源类别：文学，艺术，人文，情怀，自然</small></p>
+                                <p class="text-left"><small>点播数：1244</small> </p>
+                            </div>
+                        </div>
+
+                        <div class="new_info row">
+                            <div class="col-md-6 col-xs-6 text-center"><img src="img/bbb.jpg" ></div>
+                            <div class="col-md-6 col-xs-6 text-left">
+
+                                <h4 class="text-left">读万卷书，行万里路</h4>
+                                <p class="text-left"><small>资源类别：文学，艺术，人文，情怀，自然</small></p>
+                                <p class="text-left"><small>点播数：1244 </small></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane row" id="gentie">
+                    <h3>第一集跟帖（150）</h3>
+                    <h4>热门跟帖</h4>
+                   <div class="new-pl">
+                        <div class="col-md-6 col-xs-6"><small>网易西班牙网友</small></div>
+                       <div class="col-md-6 col-xs-6  text-right"><small>2014-03-01 发表</small></div>
+                       <p class="new-pl-content">我想到的办法就是将3种都设成一样，或者将不需要的注释，重新编译</p>
+                   </div>
+                    <div class="new-pl">
+                        <div class="col-md-6 col-xs-6"><small>网易西班牙网友</small></div>
+                        <div class="col-md-6 col-xs-6  text-right"><small>2014-03-01 发表</small></div>
+                        <p class="new-pl-content">我想到的办法就是将3种都设成一样，或者将不需要的注释，重新编译</p>
+                    </div>
+                    <div class="new-pl">
+                        <div class="col-md-6 col-xs-6"><small>网易西班牙网友</small></div>
+                        <div class="col-md-6 col-xs-6  text-right"><small>2014-03-01 发表</small></div>
+                        <p class="new-pl-content">我想到的办法就是将3种都设成一样，或者将不需要的注释，重新编译</p>
+                    </div>
+
+                </div>
+              </div>
+           </div>
+       </div>
+
+
+
+   </div>
+   <script type="text/javascript">
+       var flashvars={
+           f:'http://iurevych.github.com/Flat-UI-videos/big_buck_bunny.mp4',
+           c:0,
+           loaded:'loadedHandler'
+       };
+       var video=['http://iurevych.github.com/Flat-UI-videos/big_buck_bunny.mp4->video/mp4'];
+       CKobject.embed('ckplayer/ckplayer.swf','new_video_player','ckplayer_a1','100%','100%',true,flashvars,video);
+   </script>
+
+  </body>
+</html>

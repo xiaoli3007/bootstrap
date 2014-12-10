@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <title>用户登录</title>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+      <link href="css/base.css" rel="stylesheet" media="screen">
+    <link href="css/reg.css" rel="stylesheet" media="screen">
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+
+
+    <!-- 头部导航开始 -->
+    <div class="row show-grid">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">移动版按钮</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">guanfusoft</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav ">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="list.html">列表页</a></li>
+                        <li><a href="new.html">最终页</a></li>
+                        <li><a href="news_list.html">新闻列表</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于 <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">关于我们</a></li>
+                                <li><a href="#">联系我们</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">地址：北京市海淀区中关村南鼎好大厦</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">电话:13523523578</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="关键字">
+                        </div>
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="login.html">登录</a></li>
+                        <li class="active"><a href="reg.html">注册</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+    <!-- 头部导航结束 -->
+
+    <div class="row reg">
+        <div class="col-md-6 col-md-offset-3">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="inputPassword" class="col-sm-2 control-label">用户名</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control"  placeholder="必填项" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-sm-2 control-label">密码</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="必填项" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputPassword" class="col-sm-2 control-label">邮箱</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control"    placeholder="必填项" required pattern="^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$" title="邮箱正确格式：xxx@xxx.xxx">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-sm-2 control-label">城市</label>
+                    <div class="col-sm-10">
+                        <div class="col-sm-2 nopadding">
+                        <select class="form-control">
+                            <option>北京</option>
+                            <option>上海</option>
+
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-sm-2 control-label">性别</label>
+                    <div class="col-sm-10">
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 男
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 女
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputPassword" class="col-sm-2 control-label">兴趣</label>
+                    <div class="col-sm-10">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox1" value="option1"> 读书
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox2" value="option2"> 唱歌
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox3" value="option3"> 运动
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+
+                    <div class="col-md-2 col-md-offset-5">
+                        <button class="btn btn-lg btn-primary btn-block btn-success" type="submit" id="login_submit">注册</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+  </div>
+  
+  </div> 
+</body>
+</html>
